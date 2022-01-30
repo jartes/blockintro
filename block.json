@@ -10,6 +10,14 @@
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"message": {
+			"type": "string",
+			"source": "text",
+			"selector": "div",
+			"default": ""
+		}
+	},
 	"textdomain": "gutenpride",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
