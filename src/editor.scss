@@ -7,3 +7,14 @@
 .wp-block-create-block-gutenpride {
 	border: 1px dotted #f00;
 }
+
+@font-face {
+    font-family: Gilbert;
+    src: url( gilbert.otf );
+    font-weight: bold;
+}
+
+.wp-block-create-block-gutenpride input {
+    font-family: Gilbert !important;
+    font-size: 64px !important;
+}

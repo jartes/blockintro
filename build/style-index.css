@@ -13,4 +13,14 @@
   padding: 2px;
 }
 
+@font-face {
+  font-family: Gilbert;
+  src: url(fonts/gilbert.9d90212e.otf);
+  font-weight: bold;
+}
+.wp-block-create-block-gutenpride {
+  font-family: Gilbert;
+  font-size: 64px;
+}
+
 /*# sourceMappingURL=style-index.css.map*/
