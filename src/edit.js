@@ -11,21 +11,25 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( { attributes, isSelected, setAttributes } ) {
 	return (
         <div { ...useBlockProps() }>
-            <Placeholder
-                label={ __( 'My first block label', 'gutenpride' ) }
-                instructions={ __( 'Instructions: poing your moouse over the text to edit it', 'gutenpride' ) }
-            
-            >
-                <TextareaControl
-                    label={ __( 'Message to add', 'gutenpride' ) }
-                    value={ attributes.message }
-                    help={ __( 'Please, add your message', 'gutenpride' ) }
-                    onChange={ ( val ) => setAttributes( { message: val } ) }
-                />
-            </Placeholder>
+            { attributes.message && ! isSelected ?  (
+                <div>{ attributes.message }</div>
+            ) : (
+                <Placeholder
+                    label={ __( 'My first block label', 'gutenpride' ) }
+                    instructions={ __( 'Instructions: poing your moouse over the text to edit it', 'gutenpride' ) }
+                
+                >
+                    <TextareaControl
+                        label={ __( 'Message to add', 'gutenpride' ) }
+                        value={ attributes.message }
+                        help={ __( 'Please, add your message', 'gutenpride' ) }
+                        onChange={ ( val ) => setAttributes( { message: val } ) }
+                    />
+                </Placeholder>    
+            ) }
         </div>
     );
 }
