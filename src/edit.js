@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
-import { TextControl } from '@wordpress/components';
+import { TextareaControl } from '@wordpress/components';
 import './editor.scss';
 
 /**
@@ -14,9 +14,10 @@ import './editor.scss';
 export default function Edit( { attributes, setAttributes } ) {
 	return (
         <div { ...useBlockProps() }>
-            <TextControl
+            <TextareaControl
                 label={ __( 'Message to add', 'gutenpride' ) }
                 value={ attributes.message }
+                help={ __( 'Please, add your message', 'gutenpride' ) }
                 onChange={ ( val ) => setAttributes( { message: val } ) }
             />
         </div>
