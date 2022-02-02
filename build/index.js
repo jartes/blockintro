@@ -40,14 +40,17 @@ function Edit(_ref) {
     attributes,
     setAttributes
   } = _ref;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Placeholder, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('My first block label', 'gutenpride'),
+    instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Instructions: poing your moouse over the text to edit it', 'gutenpride')
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Message to add', 'gutenpride'),
     value: attributes.message,
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Please, add your message', 'gutenpride'),
     onChange: val => setAttributes({
       message: val
     })
-  }));
+  })));
 }
 
 /***/ }),

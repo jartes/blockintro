@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
-import { TextareaControl } from '@wordpress/components';
+import { Placeholder, TextareaControl } from '@wordpress/components';
 import './editor.scss';
 
 /**
@@ -14,12 +14,18 @@ import './editor.scss';
 export default function Edit( { attributes, setAttributes } ) {
 	return (
         <div { ...useBlockProps() }>
-            <TextareaControl
-                label={ __( 'Message to add', 'gutenpride' ) }
-                value={ attributes.message }
-                help={ __( 'Please, add your message', 'gutenpride' ) }
-                onChange={ ( val ) => setAttributes( { message: val } ) }
-            />
+            <Placeholder
+                label={ __( 'My first block label', 'gutenpride' ) }
+                instructions={ __( 'Instructions: poing your moouse over the text to edit it', 'gutenpride' ) }
+            
+            >
+                <TextareaControl
+                    label={ __( 'Message to add', 'gutenpride' ) }
+                    value={ attributes.message }
+                    help={ __( 'Please, add your message', 'gutenpride' ) }
+                    onChange={ ( val ) => setAttributes( { message: val } ) }
+                />
+            </Placeholder>
         </div>
     );
 }
